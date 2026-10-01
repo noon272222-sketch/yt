@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init({
+    publicKey: "HvEvYUGZh9TROH38T"
+  });
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krtos Senpai — Ninja Way</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0d14;--panel:#151a2b;--ink:#f4f1ea;--muted:#9aa3b8;--orange:#ff7a1a;--blue:#2e7bff;--red:#e0243a;--line:#262d47;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff6ea;--panel:#fff;--ink:#1b1b24;--muted:#5b6070;--line:#f0d9bd}}
+:root[data-theme="light"]{--bg:#fff6ea;--panel:#fff;--ink:#1b1b24;--muted:#5b6070;--line:#f0d9bd}
+:root[data-theme="dark"]{--bg:#0b0d14;--panel:#151a2b;--ink:#f4f1ea;--muted:#9aa3b8;--line:#262d47}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Rajdhani',system-ui,sans-serif;font-size:18px;
+background-image:radial-gradient(circle at 15% 0%,color-mix(in srgb,var(--orange) 22%,transparent),transparent 45%),radial-gradient(circle at 90% 30%,color-mix(in srgb,var(--blue) 18%,transparent),transparent 40%)}
+h1,h2,h3,.logo{font-family:'Bangers',Impact,sans-serif;letter-spacing:1.5px;font-weight:400;margin:0}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 5%;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:3px solid var(--orange)}
+.logo{font-size:28px;color:var(--orange);text-shadow:2px 2px 0 var(--red)}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{padding:6px 14px;border-radius:99px;font-weight:700;text-transform:uppercase;font-size:15px;cursor:pointer;border:2px solid transparent}
+nav a:hover,nav a.on{border-color:var(--orange);background:rgba(255,122,26,.15)}
+.tools{display:flex;gap:8px}
+button,.btn{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:10px;padding:10px 22px;background:var(--orange);color:#1a0d00;text-transform:uppercase;box-shadow:0 4px 0 color-mix(in srgb,var(--orange) 55%,#000);transition:.15s;display:inline-block}
+button:hover,.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:var(--blue);color:#fff;box-shadow:0 4px 0 color-mix(in srgb,var(--blue) 55%,#000)}
+.icon{padding:6px 12px;box-shadow:none;background:var(--panel);color:var(--ink);border:2px solid var(--line)}
+main{max-width:1100px;margin:auto;padding:30px 5% 50px}
+.page{display:none;animation:in .45s ease}.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1}}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center;min-height:60vh}
+.hero h1{font-size:clamp(44px,8vw,88px);line-height:.95;color:var(--orange);text-shadow:3px 3px 0 var(--red)}
+.hero p{color:var(--muted);font-size:20px;max-width:46ch}
+.tag{display:inline-block;background:var(--red);color:#fff;padding:2px 12px;border-radius:6px;font-weight:700;letter-spacing:2px;font-size:14px;transform:rotate(-2deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:36px 0}
+.stat{background:var(--panel);border:2px solid var(--line);border-left:6px solid var(--orange);border-radius:12px;padding:14px 18px}
+.stat b{font-family:'Bangers',sans-serif;font-size:38px;color:var(--orange);display:block;letter-spacing:1px;font-weight:400}
+.stat span{color:var(--muted);text-transform:uppercase;font-size:14px;letter-spacing:1px}
+h2{font-size:clamp(32px,5vw,48px);margin:8px 0 18px;color:var(--orange)}
+h2 small{font-family:'Rajdhani';font-size:16px;color:var(--muted);letter-spacing:1px;display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:14px;overflow:hidden;transition:.2s;cursor:pointer}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);border-color:var(--orange);box-shadow:0 12px 30px rgba(255,122,26,.25)}
+.thumb{height:150px;display:grid;place-items:center;font-size:64px;position:relative;color:#fff}
+.thumb i{position:absolute;right:8px;bottom:8px;font:700 13px 'Rajdhani';background:rgba(0,0,0,.7);padding:2px 8px;border-radius:5px;font-style:normal}
+.card .b{padding:12px 16px 16px}.card h3{font-size:24px}.card p{margin:4px 0 0;color:var(--muted);font-size:16px}
+.chars .card.sel{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue)}
+.panel{margin-top:22px;background:var(--panel);border:2px dashed var(--orange);border-radius:14px;padding:20px 24px;min-height:90px}
+.panel h3{font-size:30px}.panel p{margin:6px 0 0;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.box{background:var(--panel);border:2px solid var(--line);border-radius:14px;padding:22px}
+.box ul{padding-left:20px;margin:8px 0}
+input,textarea{width:100%;font:inherit;padding:10px 12px;margin:6px 0;border-radius:8px;border:2px solid var(--line);background:var(--bg);color:var(--ink)}
+.cta{text-align:center;background:linear-gradient(135deg,var(--orange),var(--red));color:#fff;border-radius:16px;padding:34px 20px;margin-top:36px}
+.cta h2{color:#fff;margin:0 0 10px}.cta .btn{background:#fff;color:#c0392b;box-shadow:0 4px 0 rgba(0,0,0,.3)}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:24px 5% 34px;border-top:2px solid var(--line)}
+.stage{position:relative;width:min(320px,72vw);aspect-ratio:1;margin:auto;display:grid;place-items:end center}
+.aura{position:absolute;inset:6%;border-radius:50%;background:conic-gradient(var(--orange),var(--red),#fff,var(--orange));animation:spin 6s linear infinite;opacity:.85;box-shadow:0 0 50px 10px color-mix(in srgb,var(--orange) 50%,transparent)}
+[data-page=home] .aura{background:conic-gradient(#fff,#7fc4ff,#2e7bff,#fff,#7fc4ff,#2e7bff,#fff);box-shadow:0 0 60px 20px rgba(46,123,255,.55);animation-duration:3s}
+.stage svg,.stage img{position:relative;width:90%;height:auto;filter:drop-shadow(0 8px 12px rgba(0,0,0,.45))}
+.banner{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:center;background:linear-gradient(120deg,color-mix(in srgb,var(--orange) 18%,var(--panel)),var(--panel));border:2px solid var(--line);border-radius:18px;padding:16px 28px;margin-bottom:24px}
+.banner .stage{width:min(230px,60vw)}
+.q{color:var(--muted);font-style:italic}
+.thumb{overflow:hidden}
+.thumb svg,.thumb img{position:absolute;left:50%;transform:translateX(-50%);bottom:-8px;height:125%;width:auto}
+.mini svg,.mini img{width:110px;height:auto}
+@media(max-width:760px){.hero,.two,.banner{grid-template-columns:1fr}.banner{text-align:center}.hero{text-align:center}.hero p{margin:auto}header{flex-wrap:wrap;justify-content:center}}
+/* ===== JUTSU STAGE EFFECTS ===== */
+
+.jutsu{
+  position:relative;
+  width:250px;
+  height:250px;
+  margin:auto;
+  display:grid;
+  place-items:center;
+}
+
+/* ===== SHARINGAN ===== */
+
+.sharingan{
+  border-radius:50%;
+  background:#b40000;
+  border:8px solid #111;
+  box-shadow:0 0 35px rgba(255,0,0,.65);
+  animation:eyeSpin 8s linear infinite;
+}
+
+.sharingan::before,
+.sharingan::after{
+  content:"";
+  position:absolute;
+  border:3px solid #111;
+  border-radius:50%;
+}
+
+.sharingan::before{inset:25px}
+.sharingan::after{inset:55px}
+
+.eye-core{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:#111;
+  z-index:3;
+}
+
+.tomoe{
+  position:absolute;
+  width:25px;
+  height:25px;
+  background:#111;
+  border-radius:50%;
+  z-index:2;
+}
+
+.t1{top:27px;left:50%;transform:translateX(-50%)}
+.t2{bottom:48px;left:42px}
+.t3{bottom:48px;right:42px}
+
+@keyframes eyeSpin{
+  to{transform:rotate(360deg)}
+}
+
+
+/* ===== RASENGAN ===== */
+
+.rasengan{
+  border-radius:50%;
+  background:
+    repeating-radial-gradient(
+      circle,
+      #dff8ff 0 5px,
+      #54c7ff 6px 10px,
+      #168cff 11px 15px
+    );
+  border:5px solid #9eeaff;
+  box-shadow:
+    0 0 25px #29a9ff,
+    0 0 60px rgba(0,140,255,.8);
+  animation:rasenganSpin 2s linear infinite;
+}
+
+.rasengan-core{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#e8fbff;
+  box-shadow:0 0 25px #fff;
+}
+
+@keyframes rasenganSpin{
+  to{transform:rotate(360deg)}
+}
+
+
+/* ===== CHIDORI ===== */
+
+.chidori{
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    #fff 0%,
+    #bdf4ff 15%,
+    #4bdcff 35%,
+    #168cff 60%,
+    transparent 72%
+  );
+  box-shadow:
+    0 0 25px #36dfff,
+    0 0 70px rgba(0,160,255,.8);
+  animation:chidoriPulse 1s infinite alternate;
+}
+
+.chidori-core{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 30px #fff;
+}
+
+.chidori span{
+  position:absolute;
+  color:#dffaff;
+  font-size:28px;
+  text-shadow:0 0 15px #00cfff;
+  animation:lightning 0.5s infinite alternate;
+}
+
+.chidori span:nth-child(2){top:15px;left:35px}
+.chidori span:nth-child(3){top:45px;right:20px}
+.chidori span:nth-child(4){bottom:25px;left:25px}
+.chidori span:nth-child(5){bottom:15px;right:45px}
+.chidori span:nth-child(6){top:90px;left:5px}
+.chidori span:nth-child(7){top:105px;right:5px}
+
+@keyframes chidoriPulse{
+  from{transform:scale(.95)}
+  to{transform:scale(1.05)}
+}
+
+@keyframes lightning{
+  from{opacity:.35;transform:scale(.8)}
+  to{opacity:1;transform:scale(1.2)}
+}
+
+
+/* ===== RINNEGAN ===== */
+
+.rinnegan{
+  border-radius:50%;
+  background:#7654d8;
+  border:8px solid #111;
+  box-shadow:
+    0 0 35px rgba(145,100,255,.8),
+    0 0 70px rgba(100,50,255,.45);
+}
+
+.rinnegan::before,
+.rinnegan::after{
+  content:"";
+  position:absolute;
+  border:5px solid #222;
+  border-radius:50%;
+}
+
+.rinnegan::before{inset:28px}
+.rinnegan::after{inset:62px}
+
+.rinnegan .eye-core{
+  background:#111;
+}
+
+.ring{
+  position:absolute;
+  border:4px solid #222;
+  border-radius:50%;
+}
+
+.r1{inset:25px}
+.r2{inset:50px}
+.r3{inset:75px}
+</style>
+<style>
+/* ===== SQUAD CHARACTER POPUP ===== */
+
+.char-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0,0,0,.82);
+  backdrop-filter: blur(12px);
+}
+
+.char-modal.show {
+  display: flex;
+}
+
+.char-modal-box {
+  position: relative;
+  width: min(850px, 95vw);
+  max-height: 90vh;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 24px;
+  background: linear-gradient(145deg, #111, #050505);
+  box-shadow: 0 0 70px rgba(255,0,0,.25);
+  animation: charPop .35s ease;
+}
+
+@keyframes charPop {
+  from {
+    opacity: 0;
+    transform: scale(.85) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.char-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.char-close:hover {
+  background: rgba(255,0,0,.35);
+}
+
+.char-modal-content {
+  padding: 35px;
+  text-align: center;
+}
+
+.char-modal-name {
+  margin: 0 0 5px;
+  font-size: clamp(28px, 5vw, 48px);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.char-modal-role {
+  opacity: .65;
+  margin-bottom: 25px;
+}
+
+.char-slide-area {
+  position: relative;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+}
+
+.char-slide-text {
+  font-size: clamp(20px, 4vw, 34px);
+  font-weight: 700;
+  line-height: 1.35;
+  text-shadow: 0 0 25px currentColor;
+  animation: slideText .7s ease;
+}
+
+@keyframes slideText {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.char-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.char-info-box {
+  padding: 15px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.05);
+}
+
+.char-info-box b {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.char-info-box span {
+  opacity: .65;
+  font-size: 14px;
+}
+
+/* ===== CHARACTER EFFECTS ===== */
+
+.effect {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.effect::before,
+.effect::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Itachi */
+.effect-itachi::before {
+  background:
+    radial-gradient(circle at 50% 50%,
+    rgba(255,0,0,.3),
+    transparent 45%);
+  animation: pulseEffect 2s infinite;
+}
+
+.effect-itachi::after {
+  box-shadow: inset 0 0 80px rgba(255,0,0,.35);
+}
+
+/* Sasuke */
+.effect-sasuke::before {
+  background:
+    repeating-linear-gradient(
+      120deg,
+      transparent 0 20px,
+      rgba(90,120,255,.12) 21px 23px
+    );
+  animation: lightningMove .4s infinite;
+}
+
+/* Naruto */
+.effect-naruto::before {
+  background:
+    radial-gradient(circle at 50% 50%,
+    rgba(255,130,20,.35),
+    transparent 45%);
+  animation: pulseEffect 1.2s infinite;
+}
+
+/* Madara */
+.effect-madara::before {
+  background:
+    radial-gradient(circle,
+    rgba(130,0,255,.2),
+    rgba(255,0,0,.2),
+    transparent 65%);
+  animation: madaraPulse 2s infinite;
+}
+
+/* Kakashi */
+.effect-kakashi::before {
+  background:
+    repeating-linear-gradient(
+      110deg,
+      transparent 0 25px,
+      rgba(70,160,255,.15) 26px 28px
+    );
+  animation: lightningMove .3s infinite;
+}
+
+/* Sakura */
+.effect-sakura::before {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,100,180,.25), transparent 8%),
+    radial-gradient(circle at 80% 70%, rgba(255,100,180,.2), transparent 8%);
+  animation: sakuraFloat 3s infinite alternate;
+}
+
+/* Gaara */
+.effect-gaara::before {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(190,150,80,.2), transparent 20%),
+    radial-gradient(circle at 80% 20%, rgba(190,150,80,.2), transparent 20%);
+  animation: sandMove 2s infinite alternate;
+}
+
+@keyframes pulseEffect {
+  50% { opacity: .35; transform: scale(1.08); }
+}
+
+@keyframes madaraPulse {
+  50% { opacity: .5; transform: rotate(3deg) scale(1.08); }
+}
+
+@keyframes lightningMove {
+  from { transform: translateX(-20px); }
+  to { transform: translateX(20px); }
+}
+
+@keyframes sakuraFloat {
+  from { transform: translateY(-10px); }
+  to { transform: translateY(10px); }
+}
+
+@keyframes sandMove {
+  from { transform: translateX(-15px); }
+  to { transform: translateX(15px); }
+}
+
+@media(max-width:600px) {
+  .char-modal-content {
+    padding: 25px 18px;
+  }
+
+  .char-info {
+    grid-template-columns: 1fr;
+  }
+
+  .char-slide-area {
+    min-height: 130px;
+    padding: 20px;
+  }
+}
+/* CHARACTER POPUP */
+.char-modal{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.82);
+  backdrop-filter:blur(8px);
+}
+
+.char-modal.show{
+  display:flex;
+}
+
+.char-modal-box{
+  width:min(850px,92%);
+  padding:30px;
+  border-radius:24px;
+  background:#101018;
+  border:2px solid #ff3b30;
+  box-shadow:0 0 50px rgba(255,40,40,.45);
+  color:white;
+  position:relative;
+  text-align:center;
+}
+
+.char-close{
+  position:absolute;
+  top:14px;
+  right:16px;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:50%;
+  background:#ff3b30;
+  color:white;
+  font-size:28px;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:10;
+}
+
+.char-close:hover{
+  transform:scale(1.1);
+  background:#ff6259;
+}
+
+#charModalName{
+  margin:0;
+  font-size:32px;
+  color:#ff7043;
+}
+
+#charModalRole{
+  margin:8px 0 20px;
+  color:#aaa;
+}
+
+.char-slide-area{
+  min-height:180px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:18px;
+  background:linear-gradient(135deg,#181820,#29202a);
+  border:1px solid #444;
+  margin:15px 0;
+  overflow:hidden;
+  position:relative;
+}
+
+#charSlideText{
+  position:relative;
+  z-index:2;
+  padding:30px;
+  font-size:25px;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:0 0 15px rgba(255,255,255,.5);
+}
+
+.char-info{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:18px;
+}
+
+.char-info > div{
+  padding:15px;
+  border-radius:12px;
+  background:#191922;
+  border:1px solid #333;
+}
+
+.char-info b{
+  display:block;
+  color:#ff7043;
+  margin-bottom:6px;
+}
+
+.char-info span{
+  color:#eee;
+}
+
+/* Effects */
+.char-modal-box.effect-naruto{
+  border-color:#ff8c00;
+  box-shadow:0 0 55px rgba(255,120,0,.5);
+}
+
+.char-modal-box.effect-sasuke{
+  border-color:#7c4dff;
+  box-shadow:0 0 55px rgba(100,60,255,.5);
+}
+
+.char-modal-box.effect-itachi{
+  border-color:#e53935;
+  box-shadow:0 0 55px rgba(220,20,20,.5);
+}
+
+.char-modal-box.effect-madara{
+  border-color:#9c27b0;
+  box-shadow:0 0 55px rgba(150,20,200,.5);
+}
+
+.char-modal-box.effect-kakashi{
+  border-color:#42a5f5;
+  box-shadow:0 0 55px rgba(40,140,255,.5);
+}
+
+.char-modal-box.effect-sakura{
+  border-color:#ff69b4;
+  box-shadow:0 0 55px rgba(255,80,170,.5);
+}
+
+.char-modal-box.effect-gaara{
+  border-color:#d98b5f;
+  box-shadow:0 0 55px rgba(200,100,60,.5);
+}
+
+@media(max-width:600px){
+  .char-modal-box{
+    padding:22px;
+  }
+
+  #charModalName{
+    font-size:25px;
+  }
+
+  #charSlideText{
+    font-size:20px;
+  }
+
+  .char-info{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#home">KRTOS SENPAI 🍥</a>
+  <nav id="nav"></nav>
+  <div class="tools"><button class="icon" id="theme" title="Toggle theme">🌗</button></div>
+</header>
+
+<main>
+<!-- PAGE 1: HOME -->
+<section class="page" id="home">
+  <div class="hero">
+    <div>
+      <span class="tag" id="tag"></span>
+      <h1 id="hTitle"></h1>
+      <p id="hSub"></p>
+      <p><a class="btn" id="subBtn" target="_blank" rel="noopener">▶ Subscribe now</a> <a class="btn alt" href="#videos">Watch videos</a></p>
+    </div>
+    <div class="stage" data-page="home"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <h2>Choose your Favourite Charachter<small>tap a legend to explore their content</small></h2>
+  <div class="grid" id="homeChars"></div>
+</section>
+
+<!-- PAGE 2: VIDEOS -->
+<section class="page" id="videos">
+  <div class="banner"><div><h2>Latest Drops <small>edit the videos list in CONFIG to add your real videos</small></h2><p class="q" data-q="videos"></p></div><div class="stage" data-page="videos"></div></div>
+  <div class="grid" id="vidGrid"></div>
+</section>
+
+<!-- PAGE 3: SQUAD (CHARACTERS) -->
+<section class="page chars" id="squad">
+  <div class="banner"><div><h2>The Shinobi Squad <small>each character = a content series on the channel</small></h2><p class="q" data-q="squad"></p></div><div class="stage" data-page="squad"></div></div>
+  <div class="grid" id="charGrid"></div>
+  <div class="panel" id="charPanel"><h3>Pick a ninja 👆</h3><p>Select any character card to see their quote and series.</p></div>
+</section>
+
+<!-- PAGE 4: JOIN / ABOUT -->
+<section class="page" id="join">
+  <div class="banner"><div><h2>Join the Hidden Leaf Crew <small>about the channel &amp; contact</small></h2><p class="q" data-q="join"></p></div><div class="stage" data-page="join"></div></div>
+  <div class="two">
+    <div class="box"><h3 style="font-size:28px">About Krtos Senpai</h3><p id="about"></p><ul id="perks"></ul></div>
+    <div class="box"><h3 style="font-size:28px">Send a message scroll 📜</h3>
+      <input id="fName" placeholder="Your ninja name">
+      <textarea id="fMsg" rows="4" placeholder="Your message / collab idea"></textarea>
+      <button id="send">Send scroll</button></div>
+  </div>
+  <div class="cta"><h2>Believe it! Don't miss a single episode.</h2><p>Hit subscribe and turn on the bell 🔔</p><a class="btn" id="subBtn2" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
+</section>
+</main>
+
+<footer>Fan-made tribute page. Naruto and its characters belong to Masashi Kishimoto, Shueisha, TV Tokyo &amp; Pierrot. <span id="year"></span> © Krtos Senpai</footer>
+
+<script>
+/* ===== EDIT ME: all page content lives here ===== */
+const CONFIG = {
+  channelName: "Krtos Senpai",
+  channelUrl: "https://youtube.com/@kratossenpai-i4l?si=2SiSR1LeNCpMmREq",   // TODO: replace with your real channel link
+  email: "kratossenpai042@gmail.com",                              // TODO: replace
+  tagline: "Enjoy Anime Vidos Every Week",
+  title: "KRTOS SENPAI",
+  sub: "Anime Related Shorts Every Week and More fun content ",
+  about: "Krtos Senpai is a YouTube channel built by fans, for fans. Expect high-energy videos, breakdowns and community fun inspired by the ninja world.",
+  perks: ["New videos every week", "Community polls & shoutouts"],
+  stats: [{n:142,s:" ",l:"Subscribers"},{n:77,s:" ",l:"Videos"},{n:100,s:"K+",l:"Views"}], // placeholder numbers
+  theme:{home:"naruto",videos:"sasuke",squad:"kakashi",join:"sakura"}, // which character themes each page
+  pages: [["home","Home"],["videos","Videos"],["squad","Squad"],["join","Join"]],
+  characters: [
+    {id:"naruto",acc:"#ff7a1a",acc2:"#e0243a",img:"https://static.toiimg.com/thumb/msid-122440193,width-1280,height-720,resizemode-4/122440193.jpg",name:"Naruto",sym:"🍥",c1:"#ff7a1a",c2:"#e0243a",series:"Hype Moments",quote:"Never give up — the next upload is always bigger!"},
+    {id:"sasuke",acc:"#8a7bff",acc2:"#d81b2e",img:"https://i.pinimg.com/736x/c9/5c/04/c95c04f9b5a99ae73f8041b7e2fe0be7.jpg",name:"Sasuke",sym:"👁️",c1:"#2b2f77",c2:"#7a1fa2",series:"Dark Edits",quote:"Power isn't loud. It's precise. Edits with that cold style."},
+    {id:"kakashi",acc:"#5fb3ff",acc2:"#7d8aa3",img:"https://c4.wallpaperflare.com/wallpaper/199/473/157/hatake-kakashi-anime-naruto-shippuuden-sharingan-wallpaper-preview.jpg",name:"Kakashi",sym:"⚡",c1:"#6b7280",c2:"#2e7bff",series:"Sensei Breakdowns",quote:"Learn every technique, one calm breakdown at a time."},
+    {id:"sakura",acc:"#ff6fa5",acc2:"#ff9a5a",img:"https://static0.srcdn.com/wordpress/wp-content/uploads/2023/12/sakura-in-naruto.jpg",name:"Sakura",sym:"🌸",c1:"#ff6fa5",c2:"#ff9a5a",series:"Community Corner",quote:"Strength is teamwork. Your comments make the channel grow."},
+    {id:"itachi",acc:"#ff4a5e",acc2:"#8a1f2d",img:"https://img3.wallspic.com/crops/0/0/1/6/2/126100/126100-forehead-sasuke_uchiha-clan_uchiha-face-anime-1920x1080.jpg",name:"Itachi",sym:"🐦‍⬛",c1:"#3a0d16",c2:"#e0243a",series:"Deep Lore",quote:"Stories with hidden meaning. Watch closely, see deeper."},
+    {id:"gaara",acc:"#e0b96a",acc2:"#c0392b",img:"https://images8.alphacoders.com/665/665367.jpg",name:"Gaara",sym:"愛",c1:"#c9a25a",c2:"#a5522a",series:"Chill & Review",quote:"Calm sand, sharp takes — reviews and relaxed talks."},
+    {id:"pain",acc:"#8a7bff",acc2:"#d81b2e",img:"https://i.redd.it/9as7rmxc5zde1.jpg",name:"PAIN",sym:"",c1:"#2b2f77",c2:"#7a1fa2",series:"Dark Edits",quote:"Power isn't loud. It's precise. Edits with that cold style."},
+  ],
+  videos: [ // url: put your real video links here
+    {t:"Pain Arc",ch:"pain",v:"1.3K views",d:"00.20",url:"https://youtube.com/shorts/VUN5ucRPn_M?si=KnnzpRB-vyDIsgfA"},
+    {t:"Rivalry Edit — Cold Fire",ch:"sasuke",v:"9.4K views",d:"3:12",url:""},
+    {t:"Copy Ninja Techniques Explained",ch:"kakashi",v:"7.8K views",d:"14:02",url:""},
+    {t:"Community Shoutout Special",ch:"sakura",v:"5.1K views",d:"8:45",url:""},
+    {t:"The Truth Behind the Crow",ch:"itachi",v:"15K views",d:"18:30",url:""},
+    {t:"Chill Review: Sand & Peace",ch:"gaara",v:"4.3K views",d:"11:09",url:""}
+  ]
+};
+/* ===== ENGINE (you usually don't need to touch this) ===== */
+const $=s=>document.querySelector(s), C=CONFIG, byId=id=>C.characters.find(x=>x.id===id);
+const YOUTUBE_API_KEY = "AIzaSyD-7em6jb57uTa2Ig2sVKkl4jQprF3PCkA";
+const YOUTUBE_HANDLE = "@kratossenpai-i4l";
+
+function formatYTNumber(num){
+  num = Number(num);
+
+  if(num >= 1000000)
+    return (num / 1000000).toFixed(1).replace(".0","") + "M";
+
+  if(num >= 1000)
+    return (num / 1000).toFixed(1).replace(".0","") + "K";
+
+  return num.toLocaleString();
+}
+
+async function loadYouTubeStats(){
+  try {
+    const url =
+      "https://www.googleapis.com/youtube/v3/channels" +
+      "?part=statistics" +
+      "&forHandle=" + encodeURIComponent(YOUTUBE_HANDLE) +
+      "&key=" + YOUTUBE_API_KEY;
+
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if(!data.items || !data.items.length){
+      throw new Error("Channel not found");
+    }
+
+    const stats = data.items[0].statistics;
+
+    document.querySelector("#stats").innerHTML = `
+      <div class="stat">
+        <b>${formatYTNumber(stats.subscriberCount)}</b>
+        <span>Subscribers</span>
+      </div>
+
+      <div class="stat">
+        <b>${formatYTNumber(stats.videoCount)}</b>
+        <span>Videos</span>
+      </div>
+
+      <div class="stat">
+        <b>${formatYTNumber(stats.viewCount)}</b>
+        <span>Views</span>
+      </div>
+    `;
+
+  } catch(error) {
+    console.error("YouTube Stats Error:", error);
+  }
+}
+
+loadYouTubeStats();
+const grad=c=>`linear-gradient(135deg,${c.c1},${c.c2})`;
+/* ===== CHARACTER DRAWINGS (original SVG art) + PAGE THEMING ===== */
+let sel=null;
+const ART={
+naruto:{skin:"#f6c9a0",hair:"#ffd23a",hp:"M46 98L36 58L60 70L62 30L84 56L100 20L116 56L138 30L140 70L164 58L154 98Q100 62 46 98Z",eye:"#2e7bff",cloth:"#ff7a1a",band:"#1c2b6b",mouth:'<path d="M84 128Q100 148 116 128Z" fill="#8a1c1c"/>',extra:'<path d="M60 112h14M60 119h14M126 112h14M126 119h14" stroke="#8a5a2b" stroke-width="2.5" stroke-linecap="round"/>',front:'<path d="M70 162L100 200L130 162" stroke="#1c2b6b" stroke-width="10" fill="none"/>'},
+sasuke:{skin:"#f3d2b5",hair:"#14162b",hp:"M46 100Q38 50 78 42L84 22L100 40L118 20L122 42Q164 52 154 100Q132 70 100 68Q68 70 46 100Z",eye:"#d81b2e",cloth:"#dfe3ee",band:"#1c2b6b",front:'<path d="M74 68L80 104L96 74ZM126 68L120 104L104 74Z" fill="#14162b"/><path d="M60 164L100 192L140 164L134 158Q100 182 66 158Z" fill="#2b3a8f"/>'},
+kakashi:{skin:"#f3d2b5",hair:"#d9dde6",hp:"M46 100Q34 46 88 34L98 10L112 34Q168 46 154 100Q132 68 100 70Q68 68 46 100Z",eye:"#333",cloth:"#3f6b4f",band:"#1c2b6b",front:'<path d="M46 90H104V124Q70 124 46 110Z" fill="#1c2b6b"/><path d="M56 114Q100 122 144 114L138 140Q100 168 62 140Z" fill="#2b3a55"/>'},
+sakura:{skin:"#f8d5bd",hair:"#ff8fb8",hp:"M44 110Q36 40 100 34Q164 40 156 110L154 150Q142 118 138 92Q100 100 62 92Q58 118 46 150Z",eye:"#2fb36b",cloth:"#d6284f",band:"#c0203f"},
+itachi:{skin:"#f0c4a0",hair:"#14121a",hp:"M48 98Q44 50 100 42Q156 50 152 98Q130 84 100 86Q70 84 48 98Z",eye:"#d81b2e",cloth:"#1a1a22",band:"#2a2f6b",back:'<path d="M46 100Q40 44 100 36Q160 44 154 100L158 200L138 200L136 118L64 118L62 200L42 200Z" fill="#14121a"/>',extra:'<path d="M70 118Q76 128 72 138M130 118Q124 128 128 138" stroke="#7a4a4a" stroke-width="2.5" fill="none"/>',front:'<path d="M84 90L116 72" stroke="#333" stroke-width="3"/><ellipse cx="58" cy="198" rx="14" ry="9" fill="#d81b2e" stroke="#fff" stroke-width="2"/><ellipse cx="142" cy="198" rx="14" ry="9" fill="#d81b2e" stroke="#fff" stroke-width="2"/>'},
+gaara:{skin:"#f6d6b8",hair:"#c0392b",hp:"M48 95Q42 45 84 36L100 20L116 36Q160 45 152 95Q130 72 100 72Q70 72 48 95Z",eye:"#6fd3c8",cloth:"#5a3a2a",back:'<ellipse cx="162" cy="172" rx="22" ry="34" fill="#c9a25a" stroke="#8a6a2a" stroke-width="3"/>',extra:'<ellipse cx="78" cy="110" rx="13" ry="13" fill="none" stroke="#222" stroke-width="4"/><ellipse cx="122" cy="110" rx="13" ry="13" fill="none" stroke="#222" stroke-width="4"/><text x="100" y="88" font-size="15" text-anchor="middle" fill="#c0392b" font-weight="700">愛</text>'}
+};
+function art(id){const a=ART[id];return `<svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg"><path d="M28 220Q34 164 100 158Q166 164 172 220Z" fill="${a.cloth}"/>${a.back||""}<rect x="88" y="138" width="24" height="26" fill="${a.skin}"/><ellipse cx="100" cy="102" rx="52" ry="56" fill="${a.skin}"/><path d="${a.hp}" fill="${a.hair}"/>${[78,122].map(x=>`<ellipse cx="${x}" cy="110" rx="9" ry="10" fill="#fff"/><circle cx="${x}" cy="111" r="6" fill="${a.eye}"/><circle cx="${x}" cy="111" r="3" fill="#111"/><circle cx="${x+2}" cy="108" r="1.6" fill="#fff"/>`).join("")}${a.mouth||'<path d="M88 132Q100 141 112 132" stroke="#7a3b2b" stroke-width="3" fill="none" stroke-linecap="round"/>'}${a.extra||""}${a.band?`<rect x="46" y="70" width="108" height="20" rx="4" fill="${a.band}"/><rect x="80" y="72" width="40" height="16" rx="3" fill="#cfd6e2"/><path d="M92 80a5 5 0 1 1 8 4" stroke="#556" stroke-width="2" fill="none"/>`:""}${a.front||""}</svg>`}
+const pic=c=>c.img?`<img src="${c.img}" alt="${c.name}">`:art(c.id);
+function theme(c){const r=document.documentElement.style;r.setProperty("--orange",c.acc);r.setProperty("--red",c.acc2);r.setProperty("--blue",c.acc2)}
+document.querySelectorAll(".stage").forEach(s=>{
+  const page = s.dataset.page;
+
+  const effects = {
+    home: `<div class="jutsu sharingan">
+      <div class="tomoe t1"></div>
+      <div class="tomoe t2"></div>
+      <div class="tomoe t3"></div>
+      <div class="eye-core"></div>
+    </div>`,
+
+    videos: `<div class="jutsu rasengan">
+      <div class="rasengan-core"></div>
+    </div>`,
+
+    squad: `<div class="jutsu chidori">
+      <div class="chidori-core"></div>
+      <span>⚡</span><span>⚡</span><span>⚡</span>
+      <span>⚡</span><span>⚡</span><span>⚡</span>
+    </div>`,
+
+    join: `<div class="jutsu rinnegan">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="ring r3"></div>
+      <div class="eye-core"></div>
+    </div>`
+  };
+
+  s.innerHTML = effects[page] || "";
+});
+document.querySelectorAll("[data-q]").forEach(q=>{const c=byId(C.theme[q.dataset.q]);q.textContent="“"+c.quote+"” — "+c.name});
+$("#nav").innerHTML=C.pages.map(p=>`<a data-p="${p[0]}" href="#${p[0]}">${p[1]}</a>`).join("");
+$("#tag").textContent=C.tagline; $("#hTitle").textContent=C.title; $("#hSub").textContent=C.sub;
+$("#subBtn").href=$("#subBtn2").href=C.channelUrl; $("#about").textContent=C.about;
+$("#perks").innerHTML=C.perks.map(p=>`<li>${p}</li>`).join(""); $("#year").textContent=new Date().getFullYear();
+$("#stats").innerHTML=C.stats.map(s=>`<div class="stat"><b data-n="${s.n}" data-s="${s.s}">0${s.s}</b><span>${s.l}</span></div>`).join("");
+const charCard=c=>`<div class="card" data-c="${c.id}" onclick="openCharacter('${c.id}')"><div class="thumb" style="background:${grad(c)};height:130px">${pic(c)}</div><div class="b"><h3>${c.name}</h3><p>${c.series}</p></div></div>`;
+$("#homeChars").innerHTML=C.characters.map(charCard).join("");
+$("#charGrid").innerHTML=C.characters.map(charCard).join("");
+$("#vidGrid").innerHTML=C.videos.map(v=>{const c=byId(v.ch);return `<a class="card" href="${v.url||C.channelUrl}" target="_blank" rel="noopener"><div class="thumb" style="background:${grad(c)}">${pic(c)}<i>${v.d}</i></div><div class="b"><h3>${v.t}</h3><p>${c.name} • ${v.v}</p></div></a>`}).join("");
+document.addEventListener("click",e=>{
+  const card=e.target.closest("[data-c]"); if(!card) return;
+  const c=byId(card.dataset.c);sel=c.id;theme(c);
+  if(card.closest("#homeChars")){location.hash="squad"}
+  document.querySelectorAll("#charGrid .card").forEach(x=>x.classList.toggle("sel",x.dataset.c===c.id));
+  $("#charPanel").innerHTML=`<div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><div class="mini">${pic(c)}</div><div><h3 style="color:${c.acc}">${c.name} — ${c.series}</h3><p>“${c.quote}”</p><p><a class="btn alt" href="#videos">See ${c.name} videos</a></p></div></div>`;
+});
+function countUp(){document.querySelectorAll(".stat b").forEach(el=>{const n=+el.dataset.n,s=el.dataset.s;let i=0;const t=setInterval(()=>{i+=Math.ceil(n/40);if(i>=n){i=n;clearInterval(t)}el.textContent=i+s},30)})}
+function route(){
+  const id=(location.hash||"#home").slice(1); const ok=C.pages.some(p=>p[0]===id)?id:"home";
+  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("on",p.id===ok));
+  document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.p===ok));
+  theme(byId(ok==="squad"&&sel?sel:C.theme[ok]));window.scrollTo({top:0,behavior:"smooth"}); if(ok==="home") countUp();
+}
+addEventListener("hashchange",route); route();
+$("#theme").onclick=()=>{const r=document.documentElement;const dark=(r.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"))==="dark";r.dataset.theme=dark?"light":"dark"};
+$("#send").onclick = async () => {
+  const name = $("#fName").value.trim() || "A fan";
+  const message = $("#fMsg").value.trim();
+
+  if (!message) {
+    alert("Please write a message first!");
+    return;
+  }
+
+  const button = $("#send");
+  button.disabled = true;
+  button.textContent = "Sending...";
+
+  try {
+    await emailjs.send(
+      "service_c2gq13a",
+      "template_txjt7fg",
+      {
+        name: name,
+        message: message,
+        to_email: C.email
+      }
+    );
+
+    alert("Scroll Delivered Successfully! 🥷\nYour message has been received. Thanks for reaching out!");
+
+    $("#fName").value = "";
+    $("#fMsg").value = "";
+
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    alert("Failed to send the scroll. Please try again.");
+  }
+
+  button.disabled = false;
+  button.textContent = "Send scroll";
+};
+/* ===== SQUAD CHARACTER POPUP SYSTEM ===== */
+
+const CHARACTER_DETAILS = {
+
+  naruto: {
+    name: "Naruto Uzumaki",
+    role: "The Seventh Hokage",
+    village: "Hidden Leaf",
+    clan: "Uzumaki",
+    ability: "Rasengan",
+    effect: "naruto",
+    slides: [
+      "Believe it!",
+      "The boy who never gave up.",
+      "From an outcast to the Seventh Hokage.",
+      "His greatest power was never giving up."
+    ]
+  },
+
+  sasuke: {
+    name: "Sasuke Uchiha",
+    role: "The Last Uchiha",
+    village: "Hidden Leaf",
+    clan: "Uchiha",
+    ability: "Sharingan",
+    effect: "sasuke",
+    slides: [
+      "The last Uchiha.",
+      "A master of the Sharingan.",
+      "His path was written by revenge.",
+      "He eventually chose his own path."
+    ]
+  },
+
+  itachi: {
+    name: "Itachi Uchiha",
+    role: "The Uchiha Prodigy",
+    village: "Hidden Leaf",
+    clan: "Uchiha",
+    ability: "Mangekyō Sharingan",
+    effect: "itachi",
+    slides: [
+      "The Uchiha prodigy.",
+      "A master of the Mangekyō Sharingan.",
+      "A shinobi who carried a painful destiny.",
+      "His story was far more complicated than it seemed."
+    ]
+  },
+
+  madara: {
+    name: "Madara Uchiha",
+    role: "Legendary Uchiha",
+    village: "Hidden Leaf",
+    clan: "Uchiha",
+    ability: "Rinnegan",
+    effect: "madara",
+    slides: [
+      "The legendary Uchiha.",
+      "A shinobi who challenged the entire world.",
+      "The power of the Rinnegan.",
+      "Madara's name became a legend."
+    ]
+  },
+
+  kakashi: {
+    name: "Kakashi Hatake",
+    role: "The Copy Ninja",
+    village: "Hidden Leaf",
+    clan: "Hatake",
+    ability: "Sharingan / Chidori",
+    effect: "kakashi",
+    slides: [
+      "The Copy Ninja Kakashi.",
+      "Over a thousand jutsu copied.",
+      "The legendary Sharingan user.",
+      "The teacher of Team 7."
+    ]
+  },
+
+  sakura: {
+    name: "Sakura Haruno",
+    role: "Medical Ninja",
+    village: "Hidden Leaf",
+    clan: "Haruno",
+    ability: "Super Strength",
+    effect: "sakura",
+    slides: [
+      "A powerful medical ninja.",
+      "Strength created through precise chakra control.",
+      "A member of Team 7.",
+      "Never underestimate Sakura."
+    ]
+  },
+
+  gaara: {
+    name: "Gaara",
+    role: "The Fifth Kazekage",
+    village: "Hidden Sand",
+    clan: "Kazekage Family",
+    ability: "Sand Manipulation",
+    effect: "gaara",
+    slides: [
+      "The Fifth Kazekage.",
+      "The sand always protects him.",
+      "From loneliness to leadership.",
+      "Gaara became a protector of his village."
+    ]
+  }
+
+};
+
+let currentCharacter = null;
+let currentSlide = 0;
+let slideTimer = null;
+
+function openCharacter(characterId) {
+
+  const data = CHARACTER_DETAILS[characterId];
+
+  if (!data) return;
+
+  currentCharacter = data;
+  currentSlide = 0;
+
+  $("#charModalName").textContent = data.name;
+  $("#charModalRole").textContent = data.role;
+
+  $("#charVillage").textContent = data.village;
+  $("#charClan").textContent = data.clan;
+  $("#charAbility").textContent = data.ability;
+
+  $("#charEffect").className =
+    "effect effect-" + data.effect;
+
+  $("#charModal").classList.add("show");
+
+  showCharacterSlide();
+
+  clearInterval(slideTimer);
+
+  slideTimer = setInterval(() => {
+
+    currentSlide++;
+
+    if (currentSlide >= data.slides.length) {
+      currentSlide = 0;
+    }
+
+    showCharacterSlide();
+
+  }, 3000);
+}
+
+
+function showCharacterSlide() {
+
+  const textElement = $("#charSlideText");
+
+  textElement.style.animation = "none";
+
+  void textElement.offsetWidth;
+
+  textElement.textContent =
+    currentCharacter.slides[currentSlide];
+
+  textElement.style.animation =
+    "slideText .7s ease";
+}
+
+
+function closeCharacter() {
+
+  $("#charModal").classList.remove("show");
+
+  clearInterval(slideTimer);
+
+  slideTimer = null;
+}
+
+
+$("#charClose").addEventListener("click", closeCharacter);
+
+
+$("#charModal").addEventListener("click", function(e) {
+
+  if (e.target === this) {
+    closeCharacter();
+  }
+
+});
+
+
+document.addEventListener("keydown", function(e) {
+
+  if (e.key === "Escape") {
+    closeCharacter();
+  }
+
+});
+</script>
+<!-- ===== CHARACTER MODAL ===== -->
+
+<div class="char-modal" id="charModal">
+
+  <div class="char-modal-box">
+
+    <button type="button" class="char-close"
+onclick="document.getElementById('charModal').classList.remove('show'); clearInterval(charSlideTimer);">
+×
+</button>
+
+    <div class="char-modal-content">
+
+      <h2 class="char-modal-name" id="charModalName">
+        Character
+      </h2>
+
+      <div class="char-modal-role" id="charModalRole"></div>
+
+      <div class="char-slide-area">
+
+        <div class="effect" id="charEffect"></div>
+
+        <div class="char-slide-text" id="charSlideText"></div>
+
+      </div>
+
+      <div class="char-info">
+
+        <div class="char-info-box">
+          <b>Village</b>
+          <span id="charVillage"></span>
+        </div>
+
+        <div class="char-info-box">
+          <b>Clan</b>
+          <span id="charClan"></span>
+        </div>
+
+        <div class="char-info-box">
+          <b>Ability</b>
+          <span id="charAbility"></span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+<script>
+const CHARACTER_DETAILS = {
+  naruto:{
+    role:"The Seventh Hokage",
+    village:"Hidden Leaf",
+    clan:"Uzumaki",
+    ability:"Rasengan",
+    effect:"naruto",
+    slides:[
+      "Believe it!",
+      "I never go back on my word.",
+      "The will of fire lives on."
+    ]
+  },
+
+  sasuke:{
+    role:"Uchiha Survivor",
+    village:"Hidden Leaf",
+    clan:"Uchiha",
+    ability:"Sharingan",
+    effect:"sasuke",
+    slides:[
+      "I have walked through darkness.",
+      "The Uchiha never forget.",
+      "I will create my own path."
+    ]
+  },
+
+  itachi:{
+    role:"The Uchiha Prodigy",
+    village:"Hidden Leaf",
+    clan:"Uchiha",
+    ability:"Mangekyo Sharingan",
+    effect:"itachi",
+    slides:[
+      "Sometimes silence says everything.",
+      "The truth is not always simple.",
+      "A shinobi must see beyond appearances."
+    ]
+  },
+
+  madara:{
+    role:"Legendary Uchiha",
+    village:"Hidden Leaf",
+    clan:"Uchiha",
+    ability:"Rinnegan",
+    effect:"madara",
+    slides:[
+      "Wake up to reality.",
+      "Power changes everything.",
+      "The world is built on conflict."
+    ]
+  },
+
+  kakashi:{
+    role:"The Copy Ninja",
+    village:"Hidden Leaf",
+    clan:"Hatake",
+    ability:"Sharingan",
+    effect:"kakashi",
+    slides:[
+      "Those who break the rules are trash.",
+      "Teamwork makes the difference.",
+      "A ninja must protect their comrades."
+    ]
+  },
+
+  sakura:{
+    role:"Medical Ninja",
+    village:"Hidden Leaf",
+    clan:"Haruno",
+    ability:"Super Strength",
+    effect:"sakura",
+    slides:[
+      "I won't stay behind anymore.",
+      "Strength comes from determination.",
+      "I can protect my friends."
+    ]
+  },
+
+  gaara:{
+    role:"Kazekage",
+    village:"Hidden Sand",
+    clan:"Unknown",
+    ability:"Sand Manipulation",
+    effect:"gaara",
+    slides:[
+      "Love yourself before seeking others.",
+      "The sand protects me.",
+      "A person can change."
+    ]
+  }
+};
+
+let charSlideIndex = 0;
+let charSlideTimer = null;
+
+function openCharacter(id){
+
+  const data = CHARACTER_DETAILS[id] || {
+    role:"Shinobi",
+    village:"Unknown",
+    clan:"Unknown",
+    ability:"Unknown",
+    effect:"",
+    slides:["Welcome, shinobi."]
+  };
+
+  const modal = document.getElementById("charModal");
+  const box = modal.querySelector(".char-modal-box");
+
+  document.getElementById("charModalName").textContent =
+    id.charAt(0).toUpperCase() + id.slice(1);
+
+  document.getElementById("charModalRole").textContent = data.role;
+  document.getElementById("charVillage").textContent = data.village;
+  document.getElementById("charClan").textContent = data.clan;
+  document.getElementById("charAbility").textContent = data.ability;
+
+  box.className = "char-modal-box effect-" + data.effect;
+
+  modal.classList.add("show");
+
+  charSlideIndex = 0;
+
+  clearInterval(charSlideTimer);
+
+  function showSlide(){
+    document.getElementById("charSlideText").textContent =
+      data.slides[charSlideIndex];
+
+    charSlideIndex =
+      (charSlideIndex + 1) % data.slides.length;
+  }
+
+  showSlide();
+
+  charSlideTimer = setInterval(showSlide,3000);
+}
+
+function closeCharacter(){
+
+  const modal = document.getElementById("charModal");
+
+  modal.classList.remove("show");
+
+  clearInterval(charSlideTimer);
+}
+
+/* Close when clicking outside the popup */
+document.getElementById("charModal").addEventListener("click",function(e){
+
+  if(e.target === this){
+    closeCharacter();
+  }
+
+});
+
+/* Close with ESC */
+document.addEventListener("keydown",function(e){
+
+  if(e.key === "Escape"){
+    closeCharacter();
+  }
+
+});
+</script>
+</body>
+</html>
